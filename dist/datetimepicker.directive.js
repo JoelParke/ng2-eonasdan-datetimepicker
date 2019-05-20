@@ -10,6 +10,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 import { Directive, ElementRef, Input, EventEmitter, Output, forwardRef, ChangeDetectorRef, KeyValueDiffers, HostListener } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import * as datetimepicker from 'eonasdan-bootstrap-datetimepicker';
+var ɵ0 = [
+    { provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(function () { return DateTimePickerDirective_1; }), multi: true }
+];
 var DateTimePickerDirective = (function () {
     function DateTimePickerDirective(changeDetector, el, differs) {
         this.changeDetector = changeDetector;
@@ -134,9 +137,7 @@ var DateTimePickerDirective = (function () {
     DateTimePickerDirective = DateTimePickerDirective_1 = __decorate([
         Directive({
             selector: '[a2e-datetimepicker]',
-            providers: [
-                { provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(function () { return DateTimePickerDirective_1; }), multi: true }
-            ]
+            providers: ɵ0
         }),
         __metadata("design:paramtypes", [ChangeDetectorRef,
             ElementRef,
@@ -145,3 +146,4 @@ var DateTimePickerDirective = (function () {
     return DateTimePickerDirective;
 }());
 export { DateTimePickerDirective };
+export { ɵ0 };

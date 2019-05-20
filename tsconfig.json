@@ -1,6 +1,15 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
     "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "es6",
+      "dom"
+    ],
     "module": "es2015",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
@@ -10,12 +19,18 @@
     "declaration": true,
     "sourceMap": false,
     "outDir": "dist",
-    "lib": ["es2015", "dom"]
+    "lib": ["es2015", "dom"],
+    "paths": {
+      "core-js/es7/*": ["node_modules/core-js/es/*"],
+      "core-js/es7/reflect": ["node_modules/core-js/proposals/reflect-metadata"],
+      "core-js/es6/*": ["node_modules/core-js/es/*"]
+    }
   },
   "angularCompilerOptions": {
     "skipTemplateCodegen": true,
     "skipMetadataEmit": false,
     "strictMetadataEmit": true,
+    "enableIvy": true,
     "annotationsAs": "decorators"
   },
   "include": [
