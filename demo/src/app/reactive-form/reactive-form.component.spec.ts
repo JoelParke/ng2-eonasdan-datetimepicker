@@ -37,8 +37,10 @@ describe('ReactiveFormComponent', () => {
   });
 
   it('should create', () => {
+    console.log('component:', component);
     expect(component).toBeTruthy();
-   it('should clear the start date - form is invalid', () => {
+  });
+  it('should clear the start date - form is invalid', () => {
     fixture.whenStable().then(() => {
       fixture.debugElement.queryAll(By.css('button'))[0].nativeElement.click();
       fixture.detectChanges();
@@ -47,7 +49,7 @@ describe('ReactiveFormComponent', () => {
       // form is not valid
       expect(component.form.valid).toBeFalsy();
     });
-  }); });
+  });
   it('should clear the end date - form is invalid', () => {
     fixture.whenStable().then(() => {
       fixture.debugElement.queryAll(By.css('button'))[1].nativeElement.click();
