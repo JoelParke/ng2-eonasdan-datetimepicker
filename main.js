@@ -60,8 +60,6 @@ var map = {
 	"./dv.js": "../node_modules/moment/locale/dv.js",
 	"./el": "../node_modules/moment/locale/el.js",
 	"./el.js": "../node_modules/moment/locale/el.js",
-	"./en-SG": "../node_modules/moment/locale/en-SG.js",
-	"./en-SG.js": "../node_modules/moment/locale/en-SG.js",
 	"./en-au": "../node_modules/moment/locale/en-au.js",
 	"./en-au.js": "../node_modules/moment/locale/en-au.js",
 	"./en-ca": "../node_modules/moment/locale/en-ca.js",
@@ -100,8 +98,6 @@ var map = {
 	"./fr.js": "../node_modules/moment/locale/fr.js",
 	"./fy": "../node_modules/moment/locale/fy.js",
 	"./fy.js": "../node_modules/moment/locale/fy.js",
-	"./ga": "../node_modules/moment/locale/ga.js",
-	"./ga.js": "../node_modules/moment/locale/ga.js",
 	"./gd": "../node_modules/moment/locale/gd.js",
 	"./gd.js": "../node_modules/moment/locale/gd.js",
 	"./gl": "../node_modules/moment/locale/gl.js",
@@ -125,8 +121,6 @@ var map = {
 	"./is": "../node_modules/moment/locale/is.js",
 	"./is.js": "../node_modules/moment/locale/is.js",
 	"./it": "../node_modules/moment/locale/it.js",
-	"./it-ch": "../node_modules/moment/locale/it-ch.js",
-	"./it-ch.js": "../node_modules/moment/locale/it-ch.js",
 	"./it.js": "../node_modules/moment/locale/it.js",
 	"./ja": "../node_modules/moment/locale/ja.js",
 	"./ja.js": "../node_modules/moment/locale/ja.js",
@@ -142,8 +136,6 @@ var map = {
 	"./kn.js": "../node_modules/moment/locale/kn.js",
 	"./ko": "../node_modules/moment/locale/ko.js",
 	"./ko.js": "../node_modules/moment/locale/ko.js",
-	"./ku": "../node_modules/moment/locale/ku.js",
-	"./ku.js": "../node_modules/moment/locale/ku.js",
 	"./ky": "../node_modules/moment/locale/ky.js",
 	"./ky.js": "../node_modules/moment/locale/ky.js",
 	"./lb": "../node_modules/moment/locale/lb.js",
@@ -270,13 +262,12 @@ function webpackContext(req) {
 	return __webpack_require__(id);
 }
 function webpackContextResolve(req) {
-	var id = map[req];
-	if(!(id + 1)) { // check for number or string
+	if(!__webpack_require__.o(map, req)) {
 		var e = new Error("Cannot find module '" + req + "'");
 		e.code = 'MODULE_NOT_FOUND';
 		throw e;
 	}
-	return id;
+	return map[req];
 }
 webpackContext.keys = function webpackContextKeys() {
 	return Object.keys(map);
